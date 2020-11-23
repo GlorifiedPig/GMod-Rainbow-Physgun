@@ -17,7 +17,7 @@ end
 local localPly
 
 local function SetPhysgunColorForPlayer( ply )
-    if ply and ply:Alive() and ply:GetActiveWeapon():GetClass() == "weapon_physgun" then
+    if ply and ply:Alive() and ply:GetActiveWeapon():IsValid() and ply:GetActiveWeapon():GetClass() == "weapon_physgun" then
         ply:SetWeaponColor( rainbowColor( rainbowPhysgunSpeed ) )
     end
 end
